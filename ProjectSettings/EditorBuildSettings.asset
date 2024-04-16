@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/GameStartScene.unity
+    guid: c5ca1a11760a3d249915c5add678511c
+  - enabled: 1
+    path: Assets/Scenes/ResetPasswordScene.unity
+    guid: d9decbe7fba1111499a4f206a884f438
+  - enabled: 1
+    path: Assets/Scenes/RoomListScene.unity
+    guid: 0e40bd98f92020e43b96d73c193170df
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/SignUpScene.unity
+    guid: 87517568acbda8f46b1a639f44e92834
   m_configObjects: {}

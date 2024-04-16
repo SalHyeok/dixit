@@ -3,10 +3,22 @@ using System.Threading.Tasks; // [변경] async 기능을 이용하기 위해서는 해당 name
 
 // 뒤끝 SDK namespace 추가
 using BackEnd;
+using UnityEngine.UI;
+using TMPro;
 
 public class BackendManager : MonoBehaviour
 {
+    public TMP_InputField inputID;
+    public TMP_InputField inputPassword;
+
+
     void Start()
+    {
+        InitializeBackend();
+    }
+
+
+    private void InitializeBackend()
     {
         var bro = Backend.Initialize(true); // 뒤끝 초기화
 
@@ -19,10 +31,13 @@ public class BackendManager : MonoBehaviour
         {
             Debug.LogError("초기화 실패 : " + bro); // 실패일 경우 statusCode 400대 에러 발생
         }
-
-        /*Test();*/
     }
 
+    public void ClickLogin()
+    {
+
+        BackendLogin.Instance.CustomLogin(inputID.text,inputPassword.text);
+    }
     // =======================================================
     // [추가] 동기 함수를 비동기에서 호출하게 해주는 함수(유니티 UI 접근 불가)
     // =======================================================

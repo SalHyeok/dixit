@@ -4,6 +4,8 @@ using UnityEngine;
 
 // 뒤끝 SDK namespace 추가
 using BackEnd;
+using Unity.Loading;
+using UnityEngine.SceneManagement;
 
 public class BackendLogin
 {
@@ -48,6 +50,7 @@ public class BackendLogin
         if (bro.IsSuccess())
         {
             Debug.Log("로그인이 성공했습니다. : " + bro);
+            SceneManager.LoadScene("RoomListScene");
         }
         else
         {

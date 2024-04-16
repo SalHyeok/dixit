@@ -1638,7 +1638,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1013039937}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1755840850}
+        m_TargetAssemblyTypeName: BackendManager, Assembly-CSharp
+        m_MethodName: ClickLogin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1013039937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2137,6 +2149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7c179eb7554951458b2b19a23326a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputID: {fileID: 296726708}
+  inputPassword: {fileID: 708058097}
 --- !u!4 &1755840851
 Transform:
   m_ObjectHideFlags: 0
@@ -2554,5 +2568,5 @@ SceneRoots:
   - {fileID: 1914091560}
   - {fileID: 1447062098}
   - {fileID: 597953302}
-  - {fileID: 1155542213}
   - {fileID: 1755840851}
+  - {fileID: 1155542213}
