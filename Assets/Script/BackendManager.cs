@@ -10,6 +10,10 @@ public class BackendManager : MonoBehaviour
 {
     public TMP_InputField inputID;
     public TMP_InputField inputPassword;
+    public TMP_InputField inputNewID;
+    public TMP_InputField inputNewPassword;
+    public TMP_InputField inputCheckPassword;
+    public TMP_InputField inputNewNickname;
 
 
     void Start()
@@ -34,10 +38,28 @@ public class BackendManager : MonoBehaviour
     }
 
     public void ClickLogin()
-    {
-
+    {                 
         BackendLogin.Instance.CustomLogin(inputID.text,inputPassword.text);
     }
+
+    public void ClickSignUp()
+    {
+        if(inputNewPassword.text !=inputCheckPassword.text)
+        {
+            Debug.Log("비밀번호가 다릅니다.");
+        }
+        else
+        {
+            BackendLogin.Instance.CustomSignUp(inputNewID.text,inputNewPassword.text);
+        }
+    }
+
+    public void ClickChangeNickname()
+    {
+
+    }
+
+
     // =======================================================
     // [추가] 동기 함수를 비동기에서 호출하게 해주는 함수(유니티 UI 접근 불가)
     // =======================================================

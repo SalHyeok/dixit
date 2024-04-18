@@ -34,6 +34,7 @@ public class BackendLogin
         if (bro.IsSuccess())
         {
             Debug.Log("회원가입에 성공했습니다. : " + bro);
+            SceneManager.LoadScene("RoomListScene");
         }
         else
         {
@@ -72,5 +73,20 @@ public class BackendLogin
         {
             Debug.LogError("닉네임 변경에 실패했습니다 : " + bro);
         }
+    }
+
+    public bool CheckNickname()
+    {
+        BackendReturnObject bro = Backend.BMember.GetUserInfo();
+        string nickname = bro.GetReturnValuetoJSON()["row"]["nickname"].ToString();
+        if (nickname != "")
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }      
+
     }
 }
