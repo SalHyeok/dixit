@@ -54,10 +54,6 @@ public class BackendManager : MonoBehaviour
         }
     }
 
-    public void ClickChangeNickname()
-    {
-
-    }
 
 
     // =======================================================

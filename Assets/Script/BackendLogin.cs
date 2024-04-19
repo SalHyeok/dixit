@@ -77,9 +77,8 @@ public class BackendLogin
 
     public bool CheckNickname()
     {
-        BackendReturnObject bro = Backend.BMember.GetUserInfo();
-        string nickname = bro.GetReturnValuetoJSON()["row"]["nickname"].ToString();
-        if (nickname != "")
+        BackendReturnObject bro = Backend.BMember.GetUserInfo();        
+        if (bro.GetReturnValuetoJSON()["row"]["nickname"] != null)
         {
             return false;
         }
